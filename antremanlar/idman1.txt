@@ -1,0 +1,3 @@
+1) 1 den 100 e kadar olan sayıları ekrana yazdır.
+2) 20 ile 40 arasındaki sayıların toplamı nedir?
+3) ["Saab", "Volvo", "BMW", "Renault", "Togg", "Tesla", "Ford"] bu dizinin elemanlarını console a yaz
