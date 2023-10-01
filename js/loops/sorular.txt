@@ -1,0 +1,4 @@
+// 1 den 20 ye kadar olan sayıların KARELERİNİN TOPLAMI 
+// "Bilge Adam Bilişim Teknolojileri" metnini tersten yazdır
+// var numbers = [-22, 5, 11, 78, -4, -250, 35, 56, 11, 24, 77, 11] bu dizideki SADECE poizitif sayıların toplamını ekrana yaz
+// var numbers = [-22, 5, 11, 78, -4, -250, 35, 56, 11, 24, 77, 11] bu dizideki en büyük sayı hangisidir?
