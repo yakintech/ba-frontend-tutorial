@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //1 den kez kullanım!
+    var name = "Çağatay"
+    const trPhoneCode = "+90"
+
+    //metnin kaç karakter olduğunu length özelliğiyle öğrendim.
+    console.log(name.length);
+
+
+    //metni büyük harf olarak ekrana yaz
+    console.log(name.toUpperCase())
+
+    //metni küçük harf olarak ekrana yaz
+    console.log(name.toLowerCase())
+
+
+    var word = "   Bilge Adam Bilişim Teknolojileri  "
+
+    console.log(word.trim())
+
+    //metinde verdiğim değerin olup olmadığını kontrol eder ÖNEMLİ!
+
+    var car = "Volkswagen Transporter T4 Jant Kapagi Set 7D0601151 418987216"
+    
+    //yukarıdaki metinde "Volkswagen" anahtar kelimesi var mı?
+    var searchWord = "VOlkswagen";
+
+
+    console.log(car.toLowerCase().includes(searchWord.toLowerCase()))
+
+
+    //kullanıcın girdiği data ( search işlemi sırasında, login ekranı gibi ekranlarda) bu metin küçültülür VE sağ-sol boşlukları temizlenir
+
+    var cat = "Enjoy Cat Food Tavuklu Yetişkin Kedi Maması 15 KG"
+
+    var searchWord2 = "kedi maması    "
+
+    console.log(cat.toLowerCase().includes(searchWord2.toLowerCase().trim()))
+
+</script>
+</html>

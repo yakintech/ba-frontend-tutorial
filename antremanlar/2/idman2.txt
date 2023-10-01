@@ -1,0 +1,11 @@
+    //1) Metin uzunlupu 7 den büyük ülkeleri ekrana yaz - for döngüsü içerisinde if, lenght
+    
+    //2) Metin uzunluğu 7 den büyük kaç ülke var? - for döngüsü içerisinde if, lenght ve toplam(sayaç) adında bir değişken tanımlayıp ülkeleri toplama
+
+    //3) İçerisinde x harfi geçen ülkeleri console a yaz (includes)
+
+    //4) İçerisinde x harfi geçen kaç adet ülke var? (includes, total)
+
+    //5) Tüm ülke adlarını küçük harfle yaz ( lower case)
+
+    //6) içerisinde W harfi geçen ülke adlarını büyük harf yaz (includes, uppercase)
