@@ -12,23 +12,6 @@
 </body>
 <script>
 
-    var cities = ["İzmir", "İstanbul", "Ankara", "Aydın"];
-
-    //push function ile mevcut diziye bir eleman ekliyoruz.
-    cities.push("Bursa")
-    cities.push("Eskişehir")
-
-    // console.log('Cities: ', cities);
-
-    //mevcut diziyi ters çevirir
-    // cities.reverse()
-    // console.log('Cities: ', cities);
-
-
-    //diziden bir eleman silmek istiyorum. Dizinin birinci elemanını sil
-   var newCities = cities.slice(1)
-   console.log('newCities', newCities);
-
     const countryList = [
         "Afghanistan",
         "Albania",
@@ -282,8 +265,15 @@
     ];
 
 
-    
+    // tüm ülkelerden "(the)"" kelimesini kaldır ve tüm ülkeleri ekrana yaz
+    for (i = 0; i < countryList.length; i++) {
 
+        console.log(countryList[i].replaceAll("(the)",""));
+
+    }
+
+
+    
 
 </script>
 
