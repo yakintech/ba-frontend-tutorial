@@ -26,8 +26,8 @@
 
 
     //diziden bir eleman silmek istiyorum. Dizinin birinci elemanını sil
-   var newCities = cities.slice(1)
-   console.log('newCities', newCities);
+    cities.splice(0, 1)
+    console.log('cities', cities);
 
     const countryList = [
         "Afghanistan",
@@ -282,8 +282,10 @@
     ];
 
 
-    
 
+    //bu listede "Türkiye" var mı?
+    var control = countryList.includes("Turkey");
+    console.log('control', control);
 
 </script>
 
