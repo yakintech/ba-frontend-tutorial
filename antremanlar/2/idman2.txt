@@ -9,3 +9,16 @@
     //5) Tüm ülke adlarını küçük harfle yaz ( lower case)
 
     //6) içerisinde W harfi geçen ülke adlarını büyük harf yaz (includes, uppercase)
+
+
+
+
+    //7) var cities = ["İzmir", "İstanbul", "Aydın", "Ankara", "Trabzon"] bu dizideki "Aydın" ı sil ve kalan elemanları büyük harfli ekrana yazdır. ( splice )
+
+    //8) "Bilge Adam Bilişim Teknolojileri" metnini tersten yazdır
+
+//9) var numbers = [-22, 5, 11, 78, -4, -250, 35, 56, 11, 24, 77, 11] bu dizideki SADECE poizitif sayıların toplamını ekrana yaz
+
+//10) var numbers = [-22, 5, 11, 78, -4, -250, 35, 56, 11, 24, 77, 11] bu dizideki en büyük sayı hangisidir?
+
+//11) 1-50 arası sayılar içinde 3’e veya 5’e tam bölünebilen sayıları console a yaz ve kaç adet olduğunu console yaz.
