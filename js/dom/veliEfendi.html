@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            height: 150px;
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="display: flex; flex-direction: column;">
+        <img id="at1"
+            src="https://img.chip.com.tr/rcman/Cw940h529q95gm/storage/files/images/2022/12/04/bir-at-kac-beygir-gucune-sahip-Ls7C.jpg"
+            alt="">
+
+        <img id="at2"
+            src="https://img-s1.onedio.com/id-554d080fbe4aec5f68e087ad/rev-0/w-600/h-398/f-jpg/s-79948b6a333ada19c1e268b989ce005537bff1fc.jpg"
+            alt="">
+
+        <img id="at3" src="https://ares.shiftdelete.net/2018/05/aYBjv5.jpg" alt="">
+    </div>
+    <div>
+        <button onclick="start()">Start</button>
+    </div>
+
+</body>
+<script>
+
+    var at1 = document.getElementById("at1");
+    var at2 = document.getElementById("at2");
+    var at3 = document.getElementById("at3");
+
+    var left1 = 0;
+    var left2 = 0;
+    var left3 = 0;
+
+
+    function start() {
+
+        setInterval(() => {
+            //3 tane random değer ürettim ve atlara verdim
+            var random1 = Math.floor(Math.random() * 200)
+            var random2 = Math.floor(Math.random() * 200)
+            var random3 = Math.floor(Math.random() * 200)
+
+            left1 = left1 + random1
+            left2 = left2 + random2
+            left3 = left3 + random3
+
+            at1.style.marginLeft = left1 + "px"
+            at2.style.marginLeft = left2 + "px"
+            at3.style.marginLeft = left3 + "px"
+
+        
+
+        }, 300);
+
+    }
+</script>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="increase()" style="width: 200px; height: 200px;">Yakala</button>
+
+</body>
+<script>
+    //Ekranda bir buton var. Bu buton yarım saniyede bir yer değiştiriyor. Eğer yer değiştirmeden butona tıklarsan puanın +10
+
+    setInterval(() => {
+
+        var randomX = Math.floor(Math.random() * 1000)
+        var randomY = Math.floor(Math.random() * 800)
+
+        document.querySelector('button').style.marginLeft = randomX + "px"
+        document.querySelector('button').style.marginTop = randomY + "px"
+
+
+    }, 1000);
+
+    let points = 0
+    function increase() {
+        points = points + 10
+    }
+
+
+    //bu fonksiyon tarayıcıda herhangi bir yere tıkladığınızda çalışır
+    window.onclick = function () {
+        console.log('Hello');
+    }
+
+
+</script>
+
+</html>
