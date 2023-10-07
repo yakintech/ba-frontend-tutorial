@@ -13,9 +13,9 @@
 
 
 
-    //7) var cities = ["İzmir", "İstanbul", "Aydın", "Ankara", "Trabzon"] bu dizideki "Aydın" ı sil ve kalan elemanları büyük harfli ekrana yazdır. ( splice )
+//7) var cities = ["İzmir", "İstanbul", "Aydın", "Ankara", "Trabzon"] bu dizideki "Aydın" ı sil ve kalan elemanları büyük harfli ekrana yazdır. ( splice )
 
-    //8) "Bilge Adam Bilişim Teknolojileri" metnini tersten yazdır
+//8) "Bilge Adam Bilişim Teknolojileri" metnini tersten yazdır
 
 //9) var numbers = [-22, 5, 11, 78, -4, -250, 35, 56, 11, 24, 77, 11] bu dizideki SADECE poizitif sayıların toplamını ekrana yaz
 

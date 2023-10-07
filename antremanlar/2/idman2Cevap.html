@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+
+//7) var cities = ["İzmir", "İstanbul", "Aydın", "Ankara", "Trabzon"] bu dizideki "Aydın" ı sil ve kalan elemanları büyük harfli ekrana yazdır. ( splice )
+
+var cities = ["İzmir", "İstanbul", "Aydın", "Ankara", "Trabzon"]
+var indexNo = cities.indexOf("Aydın")
+cities.splice(indexNo,1)
+
+for( i = 0; i < cities.length; i++){
+    console.log(cities[i].toUpperCase());
+}
+
+
+//8) "Bilge Adam Bilişim Teknolojileri" metnini tersten yazdır
+
+var company = "Bilge Adam Bilişim Teknolojileri";
+var descCompany = ""
+
+for(i = (company.length - 1); i >= 0; i--){
+    descCompany = descCompany + company[i]
+}
+
+console.log('descCompany', descCompany);
+
+
+//9) var numbers = [-22, 5, 11, 78, -4, -250, 35, 56, 11, 24, 77, 11] bu dizideki SADECE poizitif sayıların toplamını ekrana yaz
+var numbers = [-22, 5, 11, 78, -4, -250, 35, 56, 11, 24, 77, 11]
+var total = 0;
+
+for(i = 0; i < numbers.length; i++){
+    if(numbers[i] > 0){
+        total = total + numbers[i]
+    }
+}
+
+console.log('TOTAL', total);
+
+
+
+
+//10) var numbers = [-22, 5, 11, 78, -4, -250, 35, 56, 11, 24, 77, 11] bu dizideki en büyük sayı hangisidir?
+var numbers2 = [-22, 5, 11, 78, -4, -250, 35, 56, 11, 24, 77, 11]
+
+var maxNumber = numbers2[0]
+for(i = 0; i < numbers2.length; i++){
+   
+    if(maxNumber < numbers2[i]){
+        maxNumber = numbers2[i]
+    }
+}
+
+console.log('MAX', maxNumber);
+
+//11) 1-50 arası sayılar içinde 3’e veya 5’e tam bölünebilen sayıları console a yaz ve kaç adet olduğunu console yaz.
+
+var total2 = 0;
+for(i = 1; i <= 50; i++){
+
+    if(i % 3 == 0 || i % 5 == 0){
+        console.log('3 e veya 5 e bölünebilen', i);
+        total2++;
+    }
+}
+
+console.log('ADET', total2);
+
+
+var data = "2"
+
+if(data === 2){
+    alert("Hello")
+}
+
+
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">Bilge Adam Bilişim Teknolojileri</h1>
+    <button onclick="change()">Change Text</button>
+</body>
+<script>
+
+    function change(){
+        //1. yol. Yukarıdaki herhangi bir elementi Id si üzerinden yakalayabilirim. document.getElemenyById ile
+        // var h1Element = document.getElementById('title')
+        // h1Element.innerHTML = "Hello Çağatay"
+
+
+        //2. yol. QuerySelector yardımıyla yakaladım
+        var h1Element = document.querySelector("h1")
+        h1Element.innerHTML = "Hello Çağatay"
+    }
+
+</script>
+</html>
