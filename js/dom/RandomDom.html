@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="change()">Change Size</button>
+
+</body>
+<script>
+
+//Verdiğim aralıkta bir sayı üretme RANDOM
+//0 ile 1000 arasında random bir sayı generate ediyorum
+var randomNumber = Math.floor(Math.random() * 1000)
+
+// her butona tıkladığında butonun genişliği ve yükseliği random değişsin. 0 - 1000 arasında
+
+function change(){
+    var btn = document.querySelector('button')
+    
+    var randomX = Math.floor(Math.random() * 1000)
+    var randomY =  Math.floor(Math.random() * 1000)
+
+    btn.style.width = randomX + "px"
+    btn.style.height = randomY + "px"
+}
+
+
+</script>
+</html>
