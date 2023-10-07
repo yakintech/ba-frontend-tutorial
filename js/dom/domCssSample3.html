@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <label for="">Name</label>
+        <input type="text" id="name" />
+    </div>
+    <div>
+        <label for="">Surname</label>
+        <input type="text" id="surname" />
+    </div>
+    <button onclick="getFullName()">Get Full Name</button>
+    <h1></h1>
+</body>
+<script>
+    function getFullName(){
+        var name = document.getElementById("name").value;
+        var surname = document.getElementById('surname').value;
+
+        document.querySelector("h1").innerText = name + " " + surname
+    }
+</script>
+
+</html>
