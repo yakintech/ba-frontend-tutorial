@@ -1,1 +1,7 @@
-//genişlik, yükseklik
+1) Ekrana bir adet buton koy. Butona her tıklandığında body e bir span eklesin ve içerisinde "Bilge Adam" yazsın
+
+2) Ekrana bir adet buton koy. Butona her tıkladığında bir adet p eklesin. P içerisinde İstanbul yazsın ama p rengi aqua olsun.
+
+3)Ekrana iki adet input ve bir adet buton koy. Butona tıkladığında inputlardan aldığı değerleri ÇARPIP ekrana eklesin. (ul içerisine) Her butona bastıpımda yeni sonuçları yazdırmaya devam edecek
+
+4) Her saniyede ekrana bir buton eklensin. 10 butondan sonra butonların rengi kırmızı olsun
