@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="start()">Start</button>
+    <div>
+
+    </div>
+</body>
+<script>
+
+function start(){
+
+    setInterval(() => {
+        var randomNumber = Math.floor(Math.random() * 1000)
+
+        var pElement = document.createElement('p');
+        pElement.innerText = randomNumber
+
+        document.querySelector('div').appendChild(pElement)
+
+    }, 1000);
+
+}
+
+</script>
+</html>

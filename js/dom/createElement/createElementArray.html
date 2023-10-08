@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="add()">Add</button>
+    <ul>
+        
+    </ul>
+</body>
+<script>
+
+    var cities = ["İzmir", "İstanbul", "Ankara", "Aydın", "Bursa"]
+
+    //Butona bastığında tüm şehirler tek tek <li> olarak eklensin.
+
+    function add(){
+
+        //Dizinin elemanları içerisinde tek tek dönüyorum ve her eleman içi bir li create edip ul ye ekliyorum
+        for(i = 0; i < cities.length; i++){
+
+            var liElement = document.createElement('li');
+            liElement.innerText = cities[i]
+
+            document.querySelector('ul').appendChild(liElement)
+
+        }
+
+    }
+    
+</script>
+</html>
