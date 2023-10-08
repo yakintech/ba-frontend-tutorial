@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="add()">Add</button>
+
+</body>
+<script>
+    //1) Ekrana bir adet buton koy. Butona her tıklandığında body e bir span eklesin ve içerisinde "Bilge Adam" yazsın
+
+    function add(){
+        var spanElement = document.createElement('span');
+        spanElement.innerText = "Bilge Adam"
+
+        document.querySelector("body").append(spanElement);
+    }
+</script>
+</html>

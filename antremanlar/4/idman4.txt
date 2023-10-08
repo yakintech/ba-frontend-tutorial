@@ -5,3 +5,4 @@
 3)Ekrana iki adet input ve bir adet buton koy. Butona tıkladığında inputlardan aldığı değerleri ÇARPIP ekrana eklesin. (ul içerisine) Her butona bastıpımda yeni sonuçları yazdırmaya devam edecek
 
 4) Her saniyede ekrana bir buton eklensin. 10 butondan sonra butonların rengi kırmızı olsun
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+        <label for="">Number-1</label>
+        <input type="text" name="" id="number1">
+    </div>
+    <div>
+        <label for="">Number-2</label>
+        <input type="text" name="" id="number2">
+    </div>
+    <div>
+        <button onclick="carp()">Çarp</button>
+    </div>
+
+    <div>
+        <ul>
+
+        </ul>
+    </div>
+</body>
+<script>
+    // 3)Ekrana iki adet input ve bir adet buton koy. Butona tıkladığında inputlardan aldığı değerleri ÇARPIP ekrana eklesin. (ul içerisine) Her butona bastığımda yeni sonuçları yazdırmaya devam edecek
+
+
+    //değerleri çarp
+    //li create et
+    //li ye çarptığın deperi yaz
+    //li yi ul ye ekle
+    //TEST ET!
+
+
+    function carp(){
+        var x = document.getElementById('number1').value;
+        var y = document.getElementById('number2').value;
+
+        var z = x * y;
+
+        var liElement = document.createElement('li');
+        liElement.innerText = x + " " + "*" + " " + y + " = " + z;
+
+        document.querySelector('ul').appendChild(liElement);
+
+
+    }
+</script>
+</html>

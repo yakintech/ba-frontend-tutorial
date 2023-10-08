@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="add()">Add</button>
+</body>
+<script>
+    // 2) Ekrana bir adet buton koy. Butona her tıkladığında bir adet p eklesin. P içerisinde İstanbul yazsın ama p rengi aqua olsun.
+
+    function add(){
+
+        var pElement = document.createElement('p');
+        pElement.innerText = "İstanbul"
+        pElement.style.color = "aqua"
+
+        document.body.appendChild(pElement)
+
+    }
+</script>
+</html>
