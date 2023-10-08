@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label for="">Price</label>
+        <input type="text" name="" id="price">
+    </div>
+    <div>
+        <button onclick="calc()">Calc</button>
+    </div>
+</body>
+<script>
+    //Ekrana 1 adet input bir adet button koy. Butona tıkladığında ekrandaki değerin %10 unu alert olarak yazsın. EĞER  kullanıcı 200 den büyük bir değer girdiyse %20 sini alert olarak yazsın
+    // 100 -> 10
+    //1000 -> 200
+
+    function calc(){
+        var price = document.getElementById('price').value;
+
+        if(price > 200){
+            alert(price * 0.2)
+        }
+        else{
+            alert(price * 0.1)
+
+        }
+
+    }
+</script>
+</html>

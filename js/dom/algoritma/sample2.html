@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+        <label for="">Not</label>
+        <input type="text" name="" id="not">
+    </div>
+    <div>
+        <button onclick="calc()">Calc</button>
+    </div>
+
+</body>
+<script>
+    //Dışarıdan 0-100 arasında bir not girilecektir. Eğer not 0-45 ise KALDI, 45-70 ise GEÇTİ, 70 - 100 ise BAŞARILI diye alert versin
+
+    function calc(){
+        var not = document.getElementById('not').value;
+
+        if(not > 0 && not < 45){
+            alert('KALDIN')
+        }
+        else if(not >= 45 && not <= 70){
+            alert("GEÇTİ")
+        }
+        else if(not > 70 && not  <= 100){
+            alert("BAŞARILI")
+        }
+        else{
+            alert("Yanlış not girdiniz...")
+        }
+    }
+</script>
+</html>

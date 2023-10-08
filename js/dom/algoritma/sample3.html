@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label for="">Number</label>
+        <input type="text" name="" id="number">
+        <button onclick="calc()">Calc</button>
+
+    </div>
+</body>
+<script>
+    //Ekrana bir input ve bir buton koy. Butona tıkladığında inputtaki sayı kadar console "HELLO" yazsın
+
+    function calc(){
+        var number = document.getElementById('number').value;
+
+        for(i = 0; i < number; i++){
+            console.log('HELLO');
+        }
+    }
+
+
+
+</script>
+</html>
