@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+   
+
+</body>
+<script>
+    //Her yarım saniye 100*100 bir div ekranın RASTGELE bir yerinde oluşacak
+
+    //1920, 465
+
+    setInterval(() => {
+        
+        var divElement = document.createElement('div');
+        divElement.style.width = "100px"
+        divElement.style.height = "100px"
+        divElement.style.backgroundColor = 'tomato'
+        divElement.style.position = 'fixed'
+
+        var randomX = Math.floor(Math.random() * 1920)
+        var randomY = Math.floor(Math.random() * 465)
+
+        divElement.style.left = randomX + "px"
+        divElement.style.top = randomY + "px"
+
+
+        document.querySelector('body').appendChild(divElement)
+
+
+
+    }, 1000);
+
+    
+
+</script>
+</html>

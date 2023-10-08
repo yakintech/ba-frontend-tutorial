@@ -15,15 +15,25 @@
 
 function start(){
 
+    var numbers = []
     setInterval(() => {
-        var randomNumber = Math.floor(Math.random() * 1000)
-
+        var randomNumber = Math.floor(Math.random() * 100)
+        
         var pElement = document.createElement('p');
         pElement.innerText = randomNumber
 
+        if(!numbers.includes(randomNumber)){
+            pElement.style.color = 'blue'
+        }
+        else{
+            pElement.style.color = 'red'
+        }
+
+        numbers.push(randomNumber)
+
         document.querySelector('div').appendChild(pElement)
 
-    }, 400);
+    }, 100);
 
 }
 
