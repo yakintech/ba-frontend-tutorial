@@ -9,6 +9,9 @@
 
 <body>
 
+    <ul>
+
+    </ul>
 </body>
 <script>
     let products = [
@@ -976,27 +979,18 @@
         }
     ]
 
+    //Yukarıda bulunan ürünlerin ADLARINI ul içeirisine içerisine yaz
+    
+    products.forEach(item => {
 
-    //Yukarıda kaç adet ürün bulunmaktadır?
-    console.log('Length: ', products.length);
+        var liElement = document.createElement('li');
+        liElement.innerText = item.name;
 
-    //Filter!!!
-    //Yukarıdaki listeden fiyatı 100 den büyük olan ürünleri başka bir diziye ata
-    //Dizinin her bir elemanına x dedim. her bir elemanı kontrol ederek filtreledim
-    var filteredProducts = products.filter(x => x.unitPrice > 100);
-    // console.log(filteredProducts);
+        document.querySelector('ul').appendChild(liElement)
 
+    })
 
-    //Fiyatı 50 ile 100 arasında olan ürünleri ekrana yaz
-    var filteredProducts2 = products.filter(q => q.unitPrice > 50 && q.unitPrice < 100)
-    console.log(filteredProducts2);
-
-    //Yukarıdaki sorunun cevabında kaç adet ürün ekrana yazılır?
-    console.log(filteredProducts2.length);
-
-    //Stock 0 olan ürünleri ekrana yazdır
-    var filteredProducts3 = products.filter(q => q.unitsInStock == 1);
-    console.log(filteredProducts3);
+    //for, foreach, map
 
 </script>
 
