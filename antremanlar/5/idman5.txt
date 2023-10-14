@@ -1,3 +1,16 @@
 1) https://northwind.vercel.app/api/suppliers bu adresten dataları alıp bir objeye ata. Her bir supplier company Name ini ekrana yazdır.
 
 *** Yukarıdaki ekrana ilave olarak ekrana bir input ve bir buton koy. Butona tıkladığımda inputtaki şehirde olan supplier lar listelensin!
+
+
+2) https://northwind.vercel.app/api/products
+
+** Kaç adet ürün var
+** Fiyatı 100 den büyük VE stok adedi 20 den büyük ürünleri console a yazdır
+** İsmi A ile başlayan ürünleri console a yazdır
+** İsmi a ile biten ürünleri console a yazdır
+** Diziye yeni bir ürün push et
+** categoryId 3 olan ürünleri console a yazdır
+** supplierId 2 VE categoryId 3 olan ürünleri console yazdır
+** supplierId 2 VE categoryId 3 olan kaç adet ürün var?
+
