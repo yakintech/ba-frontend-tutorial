@@ -8,7 +8,21 @@
 </head>
 
 <body>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Unit Price</th>
+                <th>Stock</th>
+                <th>Kdv</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
 
+        </tbody>
+    </table>
 </body>
 <script>
     let products = [
@@ -976,7 +990,56 @@
         }
     ]
 
+    products.map(item => {
+
+        let trElement = document.createElement('tr');
+
+        if (item.unitsInStock == 0){
+            trElement.style.backgroundColor = "tomato"
+        }
+
+        let tdIdElement = document.createElement('td');
+        tdIdElement.innerText = item.id
+
+        let tdNameElement = document.createElement('td');
+        tdNameElement.innerText = item.name
+
+        let tdUnitPriceElement = document.createElement('td');
+        tdUnitPriceElement.innerText = item.unitPrice.toFixed(2)
+
+        let tdStockElement = document.createElement('td');
+        tdStockElement.innerText = item.unitsInStock
+
+        let tdKDVElement = document.createElement('td');
+        tdKDVElement.innerText = (item.unitPrice * 1.2).toFixed(2);
+
+        let tdDeleteElement = document.createElement('td');
         
+        let buttonElement = document.createElement('button')
+        buttonElement.innerText = "Delete"
+        buttonElement.style.color = "red"
+
+        buttonElement.addEventListener("click", function(){
+            alert('delete butonuna tıklandı!')
+        })
+
+
+        tdDeleteElement.appendChild(buttonElement);
+
+        trElement.appendChild(tdIdElement)
+        trElement.appendChild(tdNameElement)
+        trElement.appendChild(tdUnitPriceElement)
+        trElement.appendChild(tdStockElement)
+        trElement.appendChild(tdKDVElement)
+        trElement.appendChild(tdDeleteElement)
+
+        document.querySelector('tbody').appendChild(trElement);
+
+
+    })
+
+    
+
 </script>
 
 </html>
