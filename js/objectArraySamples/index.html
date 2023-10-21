@@ -29561,6 +29561,26 @@
 
     //console.log('TOTAL ', totalPrice);
 
+
+    //Bugüne kadar bir kerede en yüksek siparişi veren müşteri kimdir? 
+
+    var totalPrices = []
+    orders.forEach(item => {
+
+        var totalOneOrder = 0
+        item.details.forEach(element => {
+            totalOneOrder = totalOneOrder + (element.unitPrice * element.quantity)
+        })
+
+        var customerOrder = {
+            totalOrderPrice : totalOneOrder,
+            customerId : item.customerId
+        }
+
+       totalPrices.push(customerOrder)
+
+    })
+
     
 
 </script>
