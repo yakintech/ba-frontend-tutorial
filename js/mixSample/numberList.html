@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <label for="">Number: </label>
+        <input type="text" id="number">
+    </div>
+    <div>
+        <button onclick="add()">Add</button>
+    </div>
+    <ul>
+
+    </ul>
+</body>
+<script>
+
+    function add() {
+
+        var number = document.getElementById('number').value;
+
+        if (number != "" && isNaN(number) == false) {
+            var liElement = document.createElement('li');
+            liElement.innerText = number * 10;
+
+            document.querySelector("ul").appendChild(liElement)
+        }
+
+    }
+
+//isNan fonksiyonu içerisine aldığı değerin number olup olmadığını bana söyler. Eğer değer numbersa false, number değilse true döner
+</script>
+
+</html>

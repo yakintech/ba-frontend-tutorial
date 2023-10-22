@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="charList" style="display: flex; justify-content: space-evenly;">
+
+    </div>
+
+    <ul>
+
+    </ul>
+</body>
+<script>
+
+    const names = ["Çağatay", "Batuhan", "Burak", "Mert", "Enes", "Cansu", "Serkan", "Akın", "Ayşe", "Müge", "Kemal", "Yalçın"]
+
+    const alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+
+    alphabet.forEach(item => {
+        var spanElement = document.createElement('span');
+        spanElement.style.cursor = 'pointer'
+        spanElement.innerText = item;
+
+        spanElement.addEventListener("click", function (e) {
+            var clickedChar = e.target.innerText
+
+            var filteredNames = names.filter(q => q.startsWith(clickedChar));
+
+            document.querySelector('ul').innerHTML = ""
+
+            filteredNames.forEach(item => {
+                var liElement = document.createElement('li')
+                liElement.innerText = item;
+
+                document.querySelector('ul').appendChild(liElement)
+            })
+
+        })
+
+        document.getElementById('charList').appendChild(spanElement)
+    })
+
+</script>
+
+</html>

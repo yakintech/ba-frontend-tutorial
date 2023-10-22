@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="text-align: center;">
+
+    <button style="margin-bottom: 20px;" onclick="start()">Start</button>
+
+    <div id="game">
+
+    </div>
+
+</body>
+<script>
+    //start butonuna bastığında id si game olan div in içerisini temizle ve 4 tane buton koy.
+    //bombayı tıklarsa bomba sesi gelsin
+
+    function start() {
+
+        //random bir bomba oluşturuyorum
+        var randomBomb = Math.floor(Math.random() * 4);
+        console.log(randomBomb);
+
+        document.getElementById('game').innerHTML = ""
+
+        for (i = 0; i < 4; i++) {
+
+            var btn = document.createElement('button')
+            btn.style.width = "100px"
+            btn.style.height = "100px"
+            btn.style.marginRight = "10px"
+            btn.id = i;
+
+            btn.addEventListener("click", function (e) {
+                var clickedBtnId = e.target.id
+
+                if (clickedBtnId == randomBomb) {
+                    e.target.style.backgroundColor = "tomato"
+                    var audio = new Audio('bomb.wav');
+                    audio.play();
+                }
+                else {
+                    e.target.style.backgroundColor = "blue"
+                }
+            })
+
+
+            document.getElementById('game').appendChild(btn);
+
+        }
+    }
+
+</script>
+
+</html>
