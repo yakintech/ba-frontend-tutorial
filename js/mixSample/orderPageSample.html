@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.min.js"
-    integrity="sha512-Dz4zO7p6MrF+VcOD6PUbA08hK1rv0hDv/wGuxSUjImaUYxRyK2gLC6eQWVqyDN9IM1X/kUA8zkykJS/gEVOd3w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        integrity="sha512-Dz4zO7p6MrF+VcOD6PUbA08hK1rv0hDv/wGuxSUjImaUYxRyK2gLC6eQWVqyDN9IM1X/kUA8zkykJS/gEVOd3w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment-with-locales.min.js">
+
+    </script>
 </head>
+
 <body>
     <table>
         <thead>
@@ -15,6 +20,8 @@
                 <th>Id</th>
                 <th>Customer Id</th>
                 <th>Order Date</th>
+                <th>Required Date</th>
+                <th>Next Date</th>
             </tr>
         </thead>
         <tbody>
@@ -24,7 +31,7 @@
 </body>
 <script>
 
-var orderData = [
+    var orderData = [
         {
             "id": 10271,
             "customerId": "SPLIR",
@@ -29557,34 +29564,63 @@ var orderData = [
         }
     ]
 
-//table kolonları ID, CustomerID, orderDate (2 Ocak 2022 Perşembe 03:00 formatında)
+    //table kolonları ID, CustomerID, orderDate (2 Ocak 2022 Perşembe 03:00 formatında)
 
 
-//Pazar günkü siparişleri listede gösterme!
-//Ek olarak bir de requiredDate kolonu ekle. Aynı formatta yazılsın
-//Ek olarak nextDate adında bir kolon ekle. Mevcut orderDate bir ay sonrasını yazsın.
+    //Pazartesi günkü siparişleri listede gösterme!
+    //Ek olarak bir de requiredDate kolonu ekle. Aynı formatta yazılsın
+    //Ek olarak nextDate adında bir kolon ekle. Mevcut orderDate bir ay sonrasını yazsın.
 
-//*** Order date kolonunu Türkçe formatta göster
+    //*** Order date kolonunu Türkçe formatta göster
 
-orderData.forEach(item => {
-    var trElement = document.createElement('tr')
-
-    var tdId = document.createElement('td')
-    tdId.innerText = item.id
-
-    var tdCustomerId = document.createElement('td')
-    tdCustomerId.innerText = item.customerId
-
-    var tdOrderDate = document.createElement('td')
-    tdOrderDate.innerText = moment(item.orderDate).format('DD MMMM YYYY dddd hh:mm')
-
-    trElement.appendChild(tdId)
-    trElement.appendChild(tdCustomerId)
-    trElement.appendChild(tdOrderDate)
-
-    document.querySelector('tbody').appendChild(trElement)
+    moment.locale('tr');
 
 
-})
+    orderData.forEach(item => {
+
+        var a = moment(item.orderDate);
+        var b = moment(item.requiredDate);
+        var res = a.diff(b)
+
+        console.log(moment.unix(res).day());
+
+
+        if (moment(item.orderDate).day() != 1) {
+            var trElement = document.createElement('tr')
+
+            var tdId = document.createElement('td')
+            tdId.innerText = item.id
+
+            var tdCustomerId = document.createElement('td')
+            tdCustomerId.innerText = item.customerId
+
+            var tdOrderDate = document.createElement('td')
+            tdOrderDate.innerText = moment(item.orderDate).format('DD MMMM YYYY dddd hh:mm')
+
+            var tdRequiredDate = document.createElement('td')
+            tdRequiredDate.innerText = moment(item.requiredDate).format('DD MMMM YYYY dddd hh:mm')
+
+            var tdNextDate = document.createElement('td')
+            tdNextDate.innerText = moment(item.orderDate).add(1, 'M').format('DD MMMM YYYY dddd hh:mm')
+
+            trElement.appendChild(tdId)
+            trElement.appendChild(tdCustomerId)
+            trElement.appendChild(tdOrderDate)
+            trElement.appendChild(tdRequiredDate)
+            trElement.appendChild(tdNextDate)
+
+
+
+            document.querySelector('tbody').appendChild(trElement)
+        }
+
+
+
+    })
+
+
+    //20 Ocak 2023 16:50:22
+    //10 Ocak 2023 10:05:11
 </script>
+
 </html>
