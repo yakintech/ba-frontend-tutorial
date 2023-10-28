@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.min.js"
+        integrity="sha512-Dz4zO7p6MrF+VcOD6PUbA08hK1rv0hDv/wGuxSUjImaUYxRyK2gLC6eQWVqyDN9IM1X/kUA8zkykJS/gEVOd3w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -15,10 +17,9 @@
 </body>
 <script>
 
-    //Thu Aug 01 1996 
-    //01 Ağustos 1996
 
-    let orders = [
+
+    var orderData = [
         {
             "id": 10271,
             "customerId": "SPLIR",
@@ -29551,18 +29552,23 @@
         }
     ]
 
-    orders.forEach(item => {
 
-        var date = moment(item.orderDate, "YYYY-MM-DD")
-
-        var result = date.format("DD MMMM YYYY dddd")
-        var result2 = date.add(-1, 'days').format("DD MMMM YYYY dddd")
+    orderData.forEach(item => {
         var liElement = document.createElement('li')
-        liElement.innerText = result + "  /   " + result2
 
+        //var dateObject = new Date(item.orderDate)
+
+        var momentDateObject = moment(item.orderDate, "DD-MM-YYYY")
+
+        var date1 = momentDateObject.format("DD MMMM YYYY dddd hh:mm")
+        var date2 = momentDateObject.add(-2, "d").format("DD MMMM YYYY dddd hh:mm")
+
+        liElement.innerText = date1 + "  " + date2
         document.querySelector('ul').appendChild(liElement)
     })
 
+    //datalar 02 Ocak 2022 gibi yazılsın...
+    //mevcut tarihlerin yanına bir hafta sonrası da yazsın...
 
 </script>
 
