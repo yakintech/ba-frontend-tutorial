@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.min.js"
+    integrity="sha512-Dz4zO7p6MrF+VcOD6PUbA08hK1rv0hDv/wGuxSUjImaUYxRyK2gLC6eQWVqyDN9IM1X/kUA8zkykJS/gEVOd3w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div>
+        <label for="">Date</label>
+        <input type="date" name="" id="orderDate">
+    </div>
+    <div>
+        <button onclick="calc()">Calc</button>
+    </div>
+</body>
+
+<script>
+    function calc(){
+
+        var orderDate = document.getElementById('orderDate').value;
+        var result = moment(orderDate)
+
+        var res2 = result.add(1, 'd')
+
+        console.log(res2);
+    }
+</script>
+
+</html>
